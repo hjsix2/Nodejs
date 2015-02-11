@@ -1,0 +1,9 @@
+{
+  "name": "nodejs-example",
+  "version": "0.0.1",
+  "description": "hjsix2 nodejs sample code",
+  "dependencies": {
+    "express": "^4.11.2",
+    "socket.io": "^1.3.3"
+  }
+}
