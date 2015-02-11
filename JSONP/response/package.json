@@ -1,0 +1,8 @@
+{
+  "name": "jQuery_JSONP_Ex",
+  "version": "0.0.1",
+  "description": "jQuery JSONP Ex - Response Server",
+  "dependencies": {
+    "express": "^4.11.1"
+  }
+}

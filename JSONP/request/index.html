@@ -1,0 +1,41 @@
+<!doctype html>
+<html>
+
+<head>
+    <title>jQuery JSONP Ex</title>
+</head>
+
+<body>
+    <script src="http://code.jquery.com/jquery-1.11.1.js"></script>
+    <script>
+        (function ($) {
+             $.getJSON("http://localhost:3000?callback=?", function(json){
+                console.log(json);
+             });
+
+            $.ajax({
+                    url: "http://localhost:3000",
+                    dataType: 'jsonp'
+                })
+                .done(function (json) {
+                    console.log(json);
+                })
+                .fail(function (jqXHR, textStatus) {
+                    console.log(jqXHR + ' / ' + textStatus);
+                });
+
+            $.ajax({
+                url: "http://localhost:3000",
+                dataType: 'jsonp',
+                jsonp: "callback",
+                jsonpCallback: "myCallback"
+            });
+        }(jQuery))
+
+        var myCallback = function (json) {
+            console.log(json);
+        }
+    </script>
+</body>
+
+</html>
